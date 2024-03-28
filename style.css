@@ -151,7 +151,7 @@ form button {
     height: auto;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     .demo-bg {
         width: auto;
         height: 100%;
