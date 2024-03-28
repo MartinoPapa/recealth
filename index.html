@@ -103,7 +103,7 @@
                     <p><span class="material-symbols-outlined">bolt</span> Secret formula to increase sales</p>
                     <p><span class="material-symbols-outlined">ads_click</span> Google Ads for your business</p>
                 </div>
-                <button onclick="bundle()">Ask Information</button>
+                <button onclick="bundle()">Ask Informations</button>
             </div>
         </div>
 
@@ -186,7 +186,7 @@
 
         const myForm = event.target;
         const formData = new FormData(myForm);
-        var button = document.getElementById("contact-submit");
+        var button = myForm.closest('form').find(':submit');
         button.innerHTML = `Sending...`;
         button.disabled = true;
 
