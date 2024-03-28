@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-body{
-    height: 100vh;
-    width: 100vw;
-    background-color: #FFFFDD !important;
-    font-family: 'Open Sans', sans-serif;
+body {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #2a2b32;
 }
 
-*{
+* {
     padding: 0;
     border: 0;
     margin: 0;
 }
 
-.center{
+.center {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.center div{
+.center div {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,111 +44,360 @@ body{
     transform: translateX(-50%);
 }
 
-.topnav{
-    position: fixed;
-    height: 20vh;
-    width: 100vw;
-}
-
-.page{
-    position: absolute;
-    top: 20vh;
-    width: 100vw;
-}
-
-.row {
-    display: flex;
-    width: 95%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-}
-  
 .column-2 {
     flex: 50%;
     width: 45%;
 }
 
-#titolo{
-    margin-right: 30px;
+#titolo {
+    margin: 30px;
 }
 
-#titolo *{
-    margin-bottom: 24px;
+#titolo * {
+    margin-bottom: 20px;
 }
 
-.column-2 h1{
+.column-2 h1 {
     font-family: inherit;
-    font-weight: 500;
+    font-weight: 550;
     line-height: 1.1;
     color: inherit;
-    font-size: 45px;
-    font-family: roboto;
+    font-size: 55px;
+    font-family: Montserrat;
 }
 
-.column-2 h3{
-    font-size: 23px;
-    font-weight: 300;
-    font-family: roboto;
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: Montserrat;
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
     font-size: 30px !important;
 }
 
-.column-2 p{
+.column-2 p {
     font-size: 19px;
 }
 
-form{
-    background-color: #ffff;
-    margin: 20px;
-    box-shadow: 0px 0px 10px 3px #A2C579;
+form {
+    background-color: #ffffff;
+    margin: 30px;
     padding: 30px 40px 30px 40px;
 }
 
-form .row{
+form .row {
     margin: 0;
     margin-top: 15px;
     padding: 0;
     width: 100%;
 }
 
-form .column-2{
+form .column-2 {
     margin-left: 5px;
 }
 
-form .column-2:first-child{
+form .column-2:first-child {
     margin-right: 5px;
     margin-left: 0;
 }
 
-form p{
+form p {
     font-size: 17px !important;
 }
 
-form input{
+fieldset {
+    width: 100%;
+}
+
+textarea {
+    height: 80px;
+}
+
+form input,
+textarea {
     padding: 0.9rem .9rem;
     font-size: 1rem;
-    color: #2d353d;
-    background-color: #e1e9f4;
+    color: #2a2b32;
+    background-color: #F7EEDD;
     background-clip: padding-box;
-    border: 1px solid #e1e9f4;
+    border: 1px solid #F7EEDD;
     width: 100%;
     box-sizing: border-box;
 }
 
-#ptoggle{
-    flex: 50%;
-    width: 50%;
-    vertical-align: middle;
-    display: table-cell;
-    line-height: 36px;
+input:focus,
+textarea:focus {
+    outline: none;
 }
 
-input:focus {
+form button {
+    text-align: center;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    top: 100px;
+}
+
+.demo-bg {
+    opacity: 0.15;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 550px) {
+    .demo-bg {
+        width: auto;
+        height: 100%;
+    }
+
+}
+
+.row {
+    position: relative;
+    display: flex;
+    width: 92%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media screen and (min-width: 1101px) {
+    #homeButton{
+        display: none;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .midwidth form {
+        display: none;
+    }
+
+    .column-2 {
+        width: auto;
+        flex: auto;
+    }
+}
+
+form textarea {
+    width: 100%;
+    flex: none;
+    resize: none;
+}
+
+button {
+    border: 1px solid #008DDA;
+    background-color: #008DDA;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 0.2s;
+    border-radius: 20px;
+    font-family: roboto;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #008DDA;
+}
+
+.submitBtn {
+    text-align: center;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #008DDA;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+
+.navbar * {
+    float: left;
+}
+
+.navbar img {
+    height: 100%;
+    width: auto;
+}
+
+.cardContainer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px 20px 20px;
+    width: calc(40% - 40px);
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(16rem, 4fr));
+    align-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1050px) {
+    .cardContainer{
+        grid-template-columns: repeat(1, minmax(12rem, 4fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cardContainer{
+        grid-template-columns: repeat(1, minmax(12rem, 4fr));
+        width: 90%;
+    }
+}
+
+.card {
+    border: 1px solid #008DDA;
+    background-color: white;
+    border-radius: 20px;
+    min-width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h1{
+    margin: 20px;
+}
+
+.card button{
+    margin: 20px;
+}
+
+.sectionTitle{
+    width: calc(100% - 40px);
+    text-align: left;
+    margin: 40px;
+}
+
+.home{
+    background-color: white;
+}
+
+.section{
+    background-color: #eaf5f5;
+}
+
+*{
+    scroll-behavior: smooth !important;
+}
+
+.formsection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formsection form{
+    border: 1px solid #008DDA;
+    border-radius: 20px;
+    max-width: 700px;
+    margin-top: 0;
+}
+
+#homeButton{
+    margin-top: 30px;
+}
+
+#homeButton:hover{
+    background-color: #008DDA;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 550px) {
+.formsection form p{
+    font-size: 14px !important;
+}
+h3{
+    font-size: 25px;
+}
+.formsection form{
+    padding: 20px;
+}
+.formsection form input, .formsection form textarea{
+    font-size: 12px;
+}
+}
+
+.card div{
     
 }
 
-form button{
+.bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+
+.bottom p{
+    margin: 20px 10px;
+    line-height: 30px;
     text-align: center;
+}
+
+.bottom span{
+    vertical-align: bottom;
+}
+
+@media screen and (max-width: 550px){
+    .bottom p{
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    #titolo h1{
+        font-size: 45px;
+    }
+
+    .bottom .material-symbols-outlined{
+        font-size: 25px !important;
+    }
+}
+
+.homeList span{
+    font-size: 30px !important;
+}
+
+.homeList p{
+    line-height: 30px;
+    vertical-align: bottom;
+}
+
+.homeList span{
+    vertical-align: bottom;
+    margin: 0 !important;
+}
+
+.description{
+    width: calc(100% - 80px);
+    text-align: justify;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 1.2rem;
+}
+
+.bundle{
+    margin: 20px;
+    margin-top: 10px;
+}
+
+.bundle p{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
