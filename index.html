@@ -189,9 +189,6 @@
         var button = document.getElementById("contact-submit");
         button.innerHTML = `Sending...`;
         button.disabled = true;
-        button = document.getElementById("contact-submitB");
-        button.disabled = true;
-        button.innerHTML = `Sending...`;
 
         fetch("/", {
             method: "POST",
@@ -201,13 +198,9 @@
             .then(() => {
                 console.log("Form successfully submitted")
                 button.innerHTML = `Message sent`;
-                button = document.getElementById("contact-submit");
-                button.innerHTML = `Message sent`;
             })
             .catch((error) => {
                 alert("error");
-                button.innerHTML = `Invia`;
-                button = document.getElementById("contact-submit");
                 button.innerHTML = `Invia`;
             });
         button.disabled = false;
