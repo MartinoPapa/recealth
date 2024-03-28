@@ -184,7 +184,7 @@
 
         const myForm = event.target;
         const formData = new FormData(myForm);
-        var button = myForm.closest('form').find(':submit');
+        var button = myForm.find(':submit');
         button.innerHTML = `Sending...`;
         button.disabled = true;
 
